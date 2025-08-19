@@ -19,13 +19,12 @@ A Flutter project support share data to social media (Facebook, Instagram, etc.)
    s.dependency 'FBSDKCoreKit', '16.1.3'
    s.dependency 'FBSDKShareKit', '16.1.3'
    s.dependency 'TwitterKit5', '5.2.0'
-   s.dependency 'TikTokOpenSDK', '~> 5.0.15'
    s.platform = :ios, '11.0'
 
    s.static_framework = true
 
   # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.swift_version = '5.0'
 end

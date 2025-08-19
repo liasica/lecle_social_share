@@ -1,7 +1,6 @@
 import UIKit
 import Flutter
 import FBSDKCoreKit
-import TikTokOpenSDK
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -15,7 +14,6 @@ import TikTokOpenSDK
             application,
             didFinishLaunchingWithOptions: launchOptions
         )
-        TikTokOpenSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
@@ -25,24 +23,7 @@ import TikTokOpenSDK
               let annotation = options[UIApplication.OpenURLOptionsKey.annotation] else {
             return false
         }
-        
-        if TikTokOpenSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: sourceApplication, annotation: annotation) {
-            return true
-        }
-        return false
-    }
-    
-    override func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        if TikTokOpenSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation) {
-            return true
-        }
-        return false
-    }
-    
-    override func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
-        if TikTokOpenSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: nil, annotation: "") {
-            return true
-        }
+
         return false
     }
 }

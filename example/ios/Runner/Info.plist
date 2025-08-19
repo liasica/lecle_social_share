@@ -69,10 +69,6 @@
         <string>tg</string>
         <string>whatsapp</string>
         <string>twitter</string>
-        <string>tiktokopensdk</string>
-        <string>tiktoksharesdk</string>
-        <string>snssdk1180</string>
-        <string>snssdk1233</string>
     </array>
 
     <key>NSPhotoLibraryUsageDescription</key>
@@ -95,8 +91,5 @@
     <array>
         <string>_dartobservatory._tcp</string>
     </array>
-
-    <key>TikTokAppID</key>
-    <string>aw9wf05mc2iwnmty</string>
 </dict>
 </plist>
